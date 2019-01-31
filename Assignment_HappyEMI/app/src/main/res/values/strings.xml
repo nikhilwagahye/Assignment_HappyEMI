@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="weather">Weather</string>
+    <string name="no_internet_connection">Please check your Internet connection and try again</string>
+    <string name="degree">\u00B0</string>
+    <string name="detecting_current_location">Detecting current location...</string>
+
+</resources>
