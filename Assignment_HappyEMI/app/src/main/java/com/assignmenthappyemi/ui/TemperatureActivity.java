@@ -299,6 +299,8 @@ public class TemperatureActivity extends AppCompatActivity implements GoogleApiC
         locationAddress.getAddressFromLocation(location.getLatitude(), location.getLongitude(),
                 TemperatureActivity.this, new GeocoderHandler());
 
+
+        // get location by lat and long
        /* if (NetworkUtils.hasConnectivity(TemperatureActivity.this)) {
             progressBar.setVisibility(View.VISIBLE);
             relativeActualView.setVisibility(View.GONE);
@@ -381,8 +383,11 @@ public class TemperatureActivity extends AppCompatActivity implements GoogleApiC
                         progressBar.setVisibility(View.VISIBLE);
                         relativeActualView.setVisibility(View.GONE);
 
+                        // get location by city
                         String query = locationAddress;
                         getTemperatureData(query);
+                    } else {
+                        Toast.makeText(TemperatureActivity.this, R.string.no_internet_connection, Toast.LENGTH_SHORT).show();
                     }
                     break;
                 default:
